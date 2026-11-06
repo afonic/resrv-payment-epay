@@ -1,0 +1,60 @@
+{
+    "name": "reachweb/resrv-payment-epay",
+    "description": "Piraeus Bank epay (Euronet Merchant Services) payment gateway for Statamic Resrv.",
+    "keywords": [
+        "Statamic",
+        "Resrv",
+        "epay",
+        "Piraeus"
+    ],
+    "homepage": "https://resrv.eu/",
+    "license": "mit",
+    "type": "statamic-addon",
+    "authors": [
+        {
+            "name": "Iosif Chatzimichail",
+            "email": "iosif@reach.gr",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "info@reach.gr"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reach\\ResrvPaymentEpay\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Reach\\ResrvPaymentEpay\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-simplexml": "*",
+        "statamic/cms": "^5.0 || ^6.0",
+        "reachweb/statamic-resrv": "^3.0 || dev-main"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0 || ^10.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Resrv Payment epay",
+            "description": "Piraeus Bank epay payment gateway for Resrv"
+        },
+        "laravel": {
+            "providers": [
+                "Reach\\ResrvPaymentEpay\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
